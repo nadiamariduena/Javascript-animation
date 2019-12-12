@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TESTO MELISSA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/sytles-index.css" rel="stylesheet" type="text/css">
+    
+    
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+
+</head>
+
+<body>
+
+        <script>
+    
+    jQuery('body').css('display', 'none');
+      
+        jQuery(document).ready(function() {
+            jQuery('body').fadeIn();
+            jQuery('a').on('click', function(){
+                var thetarget = this.getAttribute('target')
+                if (thetarget != "_blank"){
+                    var thehref = this.getAttribute('href')
+                    event.preventDefault();
+                    jQuery('body').fadeOut(function(){
+                        window.location = thehref
+                        
+                    });
+                }
+            });
+         });    
+           
+        setTimeout(function(){
+            jQuery('body').fadeIn();
+        },5000)
+    
+    
+    </script>
+
+
+    <header>
+        <nav>
+            <h3 id="logo">TESTO KLAUS</h3>
+            <p id="texto"><a href="portfolio.html">||||</a></p>
+            
+            <!-- 
+   <img class="hamburger" src="img/img-nav-burger-creme.svg" width="40" height="40"  alt="hamburger">
+
+-->
+         
+        </nav>
+
+        <section>
+            <div class="hero">
+            <img src="img/HeadOnPhotoFestivalFuermich_SinaNiemeyer_updApr18_22.jpg" alt="vacation image">
+                
+            <h1 class="headline">The Void</h1> 
+                
+                 <h2 class="headline2">Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit, sed do eiusmod ,exercitation ullamco laboris ex commodo.. </h2> 
+                
+                <p class="arrow"><a href="portfolio.html">ENTER</a></p>
+                
+            </div>
+        </section>
+    </header>
+
+
+    <div class="slider"></div>
+
+
+    
+
+
+
+ <!----------------------SCRIPTS------------------------------------>
+    
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+
+ <script src="js/app_index.js"></script>
+
+
+ <!----------------------SCRIPTS-------------------------------------->
+
+
+</body>
+
+</html>
