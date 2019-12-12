@@ -1,0 +1,296 @@
+@font-face {
+
+      src: url(../fonts/Jura-Bold.ttf);
+      font-family: 'Jura';
+  }
+
+  @font-face {
+
+      src: url(../fonts/Rajdhani-Light.ttf);
+      font-family: 'Rajdhani';
+  }
+
+  @font-face {
+
+      src: url(../fonts/BungeeHairline-Regular.ttf);
+      font-family: 'BungeeHairline';
+  }
+
+  @font-face {
+
+      src: url(../fonts/Roboto-Black.ttf);
+      font-family: 'Roboto';
+  }
+
+  @font-face {
+
+      src: url(../fonts/Arimo-Bold.ttf);
+      font-family: 'Arimo';
+  }
+
+  @font-face {
+
+      src: url(../fonts/FrankRuhlLibre-Black.ttf);
+      font-family: 'FrankRuhlLibre';
+
+  }
+
+  @font-face {
+
+      src: url(../fonts/Lato-Black.ttf);
+      font-family: 'Lato';
+  }
+  
+  
+   /*---------------------debut----------------------------------------*/
+   /*-------------------------------------------------------------*/
+   /*-------------------------------------------------------------*/
+  
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+
+    .slider {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+        background: #000;
+        
+     
+      /*
+    linear-gradient(to left, #ba7453, #d1a984);
+    the mix of the colors inside the parenthesis creates the gradient */
+      z-index: -1;
+      /*ITS going to send the background to the back of the 
+      image when put in -1, but to see the progress i should eliminate the minus */
+}
+
+  nav {
+      display: grid;
+      grid-template-columns: 10% 1fr 1fr 10%;
+      /*FR = fraction, will create invisible columns depending of the size i add*/
+      min-height: 10vh;
+      /*Height of the nav bar*/
+      color: white;
+      font-family: 'Jura';
+      align-items: center;
+      /*will position the items in the center of the box , coming from the top*/
+  }
+
+  #logo {
+
+      grid-column: 2/3;
+      /*this will move the logo and the hamburguer 
+      to a centered position, if i put for example from
+      1/3 the logo will be sent to the left together with the menu  */
+
+      font-size: 24px;
+      color: #faf3e3;
+  }
+
+  #texto {
+      justify-self: end;
+      /*It will send the hamburger completely at the end ,so to the right*/
+  }
+  #texto a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 80%;
+  }
+
+  /*--------images HERO section----------*/
+
+  section {
+      display: flex;
+      height: 80vh;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Lato';
+  }
+
+  .hero {
+      height: 60%;
+      width: 100%;
+      position: relative;
+}
+
+  .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+     
+      /*box-shadow: 1px 5px 25px #ccc;*/
+  }
+
+/*-------------HEADLINE----------------*/
+
+  h1.headline {
+      position: absolute;
+      top: 85%;
+      left: 5%;
+      font-size: 590%;
+      transform: translate(-20%, -70%);
+     /* the -20% will hide a part of the text to the left side
+      ---the--70% will push the healine to the top depending of the porcentage added */
+      color: #eee;
+      z-index: 3;
+
+  }
+
+  h2.headline2 {
+      position: absolute;
+      top: 91%;
+      left: 5.6%;
+      font-size: 90%;
+
+      margin-top: 5px;
+      transform: translate(-20%, -70%);
+ /* the -20% will hide a part of the text to the left side
+      ---the--70% will push the healine to the top depending of the porcentage added */
+      
+      font-weight: 200;
+      font-family: 'Jura';
+      line-height: 15px;
+      color: #ddd;
+
+      z-index: 3;
+      /*the z-index will help the hidden elements to surface */
+  }
+
+  br {
+      padding-top: 15px;
+  }
+
+  p.arrow {
+      position: absolute;
+      top: 94.1%;
+      left: 5.6%;
+      z-index: 3;
+
+      padding: 6px 10px;
+
+      font-family: 'Jura';
+      color: #eee;
+      font-size: 75%;
+      border: 1px solid #eee;
+  }
+
+  p.arrow:hover {
+
+      color: #333;
+      border: 1px solid #666;
+      ;
+  }
+
+  p.arrow a {
+      color: #eee;
+      text-decoration: none;
+  }
+
+
+  .hero:after {
+      content: "";
+      /*the :after generates a DIV out of nowhere*/
+      
+      background: black;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      /*adding this will cover the whole page in black, thats why i 
+      should add a position relative to the HERO on top, once done, 
+      the black will cover in black the section of the hero*/
+      
+      left: 0;
+      opacity: 0.3;
+      
+      /*to take away the black i should add opacity and then a 
+      z-index to the *headline*  so that the HEADLINE text reveal*/
+      
+      top: 0;
+  }
+  
+  
+  
+  
+   /*-------------------------------------------------------------*/
+   /*-------------------------------------------------------------*/
+   /*-------------------------------------------------------------*/
+   
+   
+  
+@media only screen and (min-width:320px) and (max-width: 960px) {
+    
+    h1.headline {
+   position: absolute;
+      top: 84%;
+      left: 5%;
+      font-size: 250%;
+      transform: translate(-20%, -70%);
+      
+      /* the -20% will hide a part of the text 
+      to the left side---the--70% will push the headline 
+      to the top depending of the porcentage added */
+      
+      color: #eee;
+      z-index: 3;
+
+  }
+
+  h2.headline2 {
+   position: absolute;
+      top: 87%;
+      left: 5.6%;
+      font-size: 80%;
+
+      margin-top: 25px;
+      transform: translate(-20%, -70%);
+      
+      /* the -20% will hide a part of the text to the left side
+      ---the--70% will push the healine to the top depending of the porcentage added */
+      
+      font-weight: 200;
+      font-family: 'Jura';
+      line-height: 15px;
+      color: #ddd;
+
+      z-index: 3;
+      /*the z-index will help the hidden elements to reveal */
+  }
+
+  br {
+      display: none;
+  }
+
+  p.arrow {
+    
+  position: absolute;
+      top: 102%;
+      left: 5.6%;
+      padding: 6px 10px;
+
+      font-family: 'Jura';
+      color: #eee;
+      font-size: 75%;
+      border: 1px solid #eee;
+  }
+
+  p.arrow:hover {
+
+      color: #333;
+      border: 1px solid #666;
+      ;
+  }
+
+  p.arrow a {
+      color: #eee;
+      text-decoration: none;
+  }
+
+}
