@@ -3,6 +3,8 @@ _Javascript animations using GSAP. TweenMax is used to animate all the css prope
 * Text and video tutorial by [Dev Ed](https://www.youtube.com/watch?v=AKmoccuRiN4)
 
 * Design by Melissa Murillo.
+* Photography by Sina Niemeyer
+
 
 ![preview](https://imagizer.imageshack.com/img922/1253/lFfNbh.gif)
 
